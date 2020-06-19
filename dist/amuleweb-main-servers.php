@@ -228,8 +228,8 @@ else {
   }
 
   foreach ($servers as $srv) {
-    echo '<div class="row p-1 border-bottom border-secondary text-break">';
-    echo '<div class="col-12 col-md-3 pl-0">';
+    echo '<div class="row p-1 border-bottom border-secondary">';
+    echo '<div class="col-12 col-md-3 pl-0 text-break">';
     if ($_SESSION["guest_login"] == 0) {
       echo '<a class="btn btn-light p-1" href="amuleweb-main-servers.php?cmd=connect&amp;ip=' . $srv->ip . '&amp;port=' . $srv->port . '">';
       echo '<svg class="bi" viewBox="0 0 16 16"><use xlink:href="#icon-connect"></use></svg>';
@@ -240,7 +240,7 @@ else {
     }
     echo $srv->name;
     echo '</div>';
-    echo '<div class="col-12 col-md-4">' . $srv->desc . '</div>';
+    echo '<div class="col-12 col-md-4 text-break">' . $srv->desc . '</div>';
     echo '<div class="col col-md-2">' . $srv->addr . '</div>';
     echo '<div class="col text-right">' . $srv->users . '</div>';
     echo '<div class="col text-right">' . $srv->files . '</div>';

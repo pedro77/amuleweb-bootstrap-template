@@ -400,11 +400,11 @@ else {
 
   foreach ($search as $file) {
     echo '<div class="row p-1 border-bottom border-secondary">';
-    echo '<div class="col-12 col-md-8 form-check form-check-inline custom-control custom-checkbox text-break mr-0">';
+    echo '<div class="col-12 col-md-8 form-check form-check-inline custom-control custom-checkbox mr-0">';
     if ( $_SESSION["guest_login"] == 0 ) {
       echo '<input type="checkbox" class="custom-control-input" id="' . $file->hash . '" name="' . $file->hash . '">';
     }
-    echo '<label class="' . ($_SESSION["guest_login"]==0 ? "custom-control-label" : "col-form-label") . '" for="' . $file->hash . '">' . $file->name . '</label>';
+    echo '<label class="' . ($_SESSION["guest_login"]==0 ? "custom-control-label" : "col-form-label") . ' d-block text-break" for="' . $file->hash . '">' . $file->name . '</label>';
     echo '</div>';
     echo '<div class="col-6 col-md-3">' . CastToXBytes($file->size) . '</div>';
     echo '<div class="col-6 col-md-1 text-right">' . $file->sources . '</div>';

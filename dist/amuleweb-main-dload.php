@@ -420,12 +420,12 @@ else {
 
     if ( $filter_status_result and $filter_cat_result ) {
       echo '<div class="row p-1 border-bottom border-secondary">';
-      echo '<div class="col-12 col-md-4 form-check form-check-inline custom-control custom-checkbox text-break mr-0">';
+      echo '<div class="col-12 col-md-4 form-check form-check-inline custom-control custom-checkbox mr-0">';
       if ( $_SESSION["guest_login"] == 0 ) {
         echo '<input type="checkbox" class="custom-control-input" id="' . $file->hash . '" name="' . $file->hash . '">';
       }
 //       echo '<label class="' . ($_SESSION["guest_login"]==0 ? "custom-control-label" : "col-form-label") . '" for="' . $file->hash . '" data-toggle="popover" data-placement="auto" data-trigger="click" data-sanitize="true" title="Full ed2k link" data-content="' . $file->link . '">' . $file->name . '</label>';
-      echo '<label class="' . ($_SESSION["guest_login"]==0 ? "custom-control-label" : "col-form-label") . '" for="' . $file->hash . '">' . $file->name . '</label>';
+      echo '<label class="' . ($_SESSION["guest_login"]==0 ? "custom-control-label" : "col-form-label") . ' d-block text-break" for="' . $file->hash . '">' . $file->name . '</label>';
       echo '</div>';
       echo '<div class="col-4 col-md-1">' . CastToXBytes($file->size) . '</div>';
       echo '<div class="col-4 col-md-1">' . CastToXBytes($file->size_done) . '</div>';

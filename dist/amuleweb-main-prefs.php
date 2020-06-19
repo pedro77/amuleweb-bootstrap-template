@@ -190,7 +190,7 @@ if ( $_SESSION["guest_login"] == 0 ) {
           <div class="col">
             <div class="form-group form-inline">
               <label for="autorefresh_time7" class="mr-1">Page refresh interval</label>
-              <input type="text" id="autorefresh_time7" name="autorefresh_time" class="form-control"<?php echo ($_SESSION["guest_login"]==0 ? "" : " disabled"); ?>>
+              <input type="number" id="autorefresh_time7" name="autorefresh_time" class="form-control"<?php echo ($_SESSION["guest_login"]==0 ? "" : " disabled"); ?>>
             </div>
           </div>
           <div class="col">
@@ -206,19 +206,19 @@ if ( $_SESSION["guest_login"] == 0 ) {
           <div class="col">
             <div class="form-group form-inline">
               <label for="max_down_limit6" class="mr-1">Max download rate</label>
-              <input type="text" id="max_down_limit6" name="max_down_limit" class="form-control"<?php echo ($_SESSION["guest_login"]==0 ? "" : " disabled"); ?>>
+              <input type="number" id="max_down_limit6" name="max_down_limit" class="form-control"<?php echo ($_SESSION["guest_login"]==0 ? "" : " disabled"); ?>>
             </div>
           </div>
           <div class="col">
             <div class="form-group form-inline">
               <label for="max_up_limit6" class="mr-1">Max upload rate</label>
-              <input type="text" id="max_up_limit6" name="max_up_limit" class="form-control"<?php echo ($_SESSION["guest_login"]==0 ? "" : " disabled"); ?>>
+              <input type="number" id="max_up_limit6" name="max_up_limit" class="form-control"<?php echo ($_SESSION["guest_login"]==0 ? "" : " disabled"); ?>>
             </div>
           </div>
           <div class="col">
             <div class="form-group form-inline">
               <label for="slot_alloc6" class="mr-1">Slot allocation</label>
-              <input type="text" id="slot_alloc6" name="slot_alloc" class="form-control"<?php echo ($_SESSION["guest_login"]==0 ? "" : " disabled"); ?>>
+              <input type="number" id="slot_alloc6" name="slot_alloc" class="form-control"<?php echo ($_SESSION["guest_login"]==0 ? "" : " disabled"); ?>>
             </div>
           </div>
 
@@ -228,13 +228,13 @@ if ( $_SESSION["guest_login"] == 0 ) {
           <div class="col">
             <div class="form-group form-inline">
               <label for="max_conn_total8" class="mr-1">Max total connections (total)</label>
-              <input type="text" id="max_conn_total8" name="max_conn_total" class="form-control"<?php echo ($_SESSION["guest_login"]==0 ? "" : " disabled"); ?>>
+              <input type="number" id="max_conn_total8" name="max_conn_total" class="form-control"<?php echo ($_SESSION["guest_login"]==0 ? "" : " disabled"); ?>>
             </div>
           </div>
           <div class="col">
             <div class="form-group form-inline">
               <label for="max_file_src7" class="mr-1">Max sources per file</label>
-              <input type="text" id="max_file_src7" name="max_file_src" class="form-control"<?php echo ($_SESSION["guest_login"]==0 ? "" : " disabled"); ?>>
+              <input type="number" id="max_file_src7" name="max_file_src" class="form-control"<?php echo ($_SESSION["guest_login"]==0 ? "" : " disabled"); ?>>
             </div>
           </div>
           <div class="col">
@@ -256,13 +256,13 @@ if ( $_SESSION["guest_login"] == 0 ) {
           <div class="col">
             <div class="form-group form-inline">
               <label for="tcp_port6" class="mr-1">TCP port</label>
-              <input type="text" id="tcp_port6" name="tcp_port" class="form-control"<?php echo ($_SESSION["guest_login"]==0 ? "" : " disabled"); ?>>
+              <input type="number" min="1" max="65535" id="tcp_port6" name="tcp_port" class="form-control"<?php echo ($_SESSION["guest_login"]==0 ? "" : " disabled"); ?>>
             </div>
           </div>
           <div class="col">
             <div class="form-group form-inline">
               <label for="udp_port6" class="mr-1">UDP port</label>
-              <input type="text" id="udp_port6" name="udp_port" class="form-control"<?php echo ($_SESSION["guest_login"]==0 ? "" : " disabled"); ?>>
+              <input type="number" min="1" max="65535" id="udp_port6" name="udp_port" class="form-control"<?php echo ($_SESSION["guest_login"]==0 ? "" : " disabled"); ?>>
             </div>
           </div>
           <div class="col">
@@ -284,13 +284,13 @@ if ( $_SESSION["guest_login"] == 0 ) {
           <div class="col">
             <div class="form-group form-inline">
               <label for="max_line_down_cap6" class="mr-1">Max download rate</label>
-              <input type="text" id="max_line_down_cap6" name="max_line_down_cap" class="form-control"<?php echo ($_SESSION["guest_login"]==0 ? "" : " disabled"); ?>>
+              <input type="number" id="max_line_down_cap6" name="max_line_down_cap" class="form-control"<?php echo ($_SESSION["guest_login"]==0 ? "" : " disabled"); ?>>
             </div>
           </div>
           <div class="col">
             <div class="form-group form-inline">
               <label for="max_line_up_cap7" class="mr-1">Max upload rate</label>
-              <input type="text" id="max_line_up_cap7" name="max_line_up_cap" class="form-control"<?php echo ($_SESSION["guest_login"]==0 ? "" : " disabled"); ?>>
+              <input type="number" id="max_line_up_cap7" name="max_line_up_cap" class="form-control"<?php echo ($_SESSION["guest_login"]==0 ? "" : " disabled"); ?>>
             </div>
           </div>
 
@@ -301,7 +301,7 @@ if ( $_SESSION["guest_login"] == 0 ) {
             <div class="form-group form-inline form-check form-check-inline custom-control custom-checkbox mr-0">
               <input type="checkbox" id="check_free_space5" name="check_free_space" class="custom-control-input"<?php echo ($_SESSION["guest_login"]==0 ? "" : " disabled"); ?>>
               <label for="check_free_space5" class="custom-control-label mr-1" id="label_check_free_space5">Check free space =&gt; Minimum free space (Mb)</label>
-              <input type="text" id="min_free_space4" name="min_free_space" class="form-control float-right mt-sm-n4 mr-xl-5">
+              <input type="number" id="min_free_space4" name="min_free_space" class="form-control float-right mt-sm-n4 mr-xl-5">
             </div>
           </div>
           <div class="col">

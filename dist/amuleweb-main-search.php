@@ -416,7 +416,7 @@ else {
     <div class="row form-inline form-group p-3">
       <div class="col-auto ml-auto">
 
-        <select name="targetcat" id="select32" class="custom-select"<?php echo ($_SESSION["guest_login"]==0 ? "" : " disabled"); ?>>
+        <select name="targetcat" id="select32" class="custom-select"<?php echo ($_SESSION["guest_login"]==0 and count($search)>0 ? "" : " disabled"); ?>>
 <?php
 
 $cats = amule_get_categories();
@@ -427,7 +427,7 @@ foreach($cats as $c) {
 ?>
         </select>
 
-        <button type="submit" name="Download" class="btn btn-primary mr-1" id="Download6" value="Download" onclick="javascript:formCommandSubmit('download')"<?php echo ($_SESSION["guest_login"]==0 ? "" : " disabled"); ?>>Download</button>
+        <button type="submit" name="Download" class="btn btn-primary mr-1" id="Download6" value="Download" onclick="javascript:formCommandSubmit('download')"<?php echo ($_SESSION["guest_login"]==0 and count($search)>0 ? "" : " disabled"); ?>>Download</button>
 
       </div>
     </div>

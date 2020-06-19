@@ -13,6 +13,9 @@ body {
 /*
 * aMule Web
 */
+input[type=number] {
+  text-align: right;
+}
 /* Chrome, Safari, Edge, Opera */
 form.amule .form-group input[type=number]::-webkit-outer-spin-button,
 form.amule .form-group input[type=number]::-webkit-inner-spin-button {
@@ -60,7 +63,6 @@ form.amule.search .form-group label {
   width: 6rem;
 }
 form.amule.search .form-group input {
-  text-align: right;
   width: 6rem;
 }
 form.amule.search .form-group.amule-size input {
@@ -108,11 +110,9 @@ form.amule.kad .form-group label {
   width: 3rem;
 }
 form.amule.kad .form-group input {
-  text-align: right;
   width: 6rem;
 }
 form.amule.kad .form-group.amule-ip input {
-  text-align: right;
   width: 3.5rem;
 }
 @media (min-width:992px) {
@@ -151,8 +151,7 @@ form.amule.prefs .form-group label {
 form.amule.prefs .form-group label.custom-control-label {
   width: 17rem;
 }
-form.amule.prefs .form-group input[type=text] {
-  text-align: right;
+form.amule.prefs .form-group input {
   width: 5rem;
 }
 #label_check_free_space5 {

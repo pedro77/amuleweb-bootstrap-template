@@ -1,5 +1,5 @@
 # amuleweb-bootstrap-template
-aMuleWeb Boostrap template
+aMuleWeb Bootsrap template
 * Bootstrap v4.5.0
 * jQuery v3.5.1
 

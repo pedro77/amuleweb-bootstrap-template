@@ -17,7 +17,9 @@ aMuleWeb Boostrap template
   Template=bootstrap
 ...
 ```
-4. Start aMule daemon, ex. `sudo systemctl start amule-daemon`
+5. Start aMule daemon, ex. `sudo systemctl start amule-daemon`
+
+Your distribution may be different. Please referer to his documentation.
 
 ## Official references
 * http://www.amule.org
